@@ -12,6 +12,7 @@
 #include <QDialog>
 #include <QtCore>
 #include <QtGui>
+#include <QFileSystemWatcher>
 #include "delegate.h"
 
 namespace Ui {
@@ -31,15 +32,17 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-
-    void on_tableView_entered(const QModelIndex &index);
-
     void on_pushButton_3_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void trackChanged( const QString & entry );
 
 private:
     Ui::MainWindow *ui;
     QStandardItemModel *model; //Creat model for MVC here
     Delegate *mydelegate;
+    QFileSystemWatcher watcher;
 };
 
 #endif // MAINWINDOW_H

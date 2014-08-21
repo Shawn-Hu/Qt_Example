@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     model=new QStandardItemModel(0,2,this); //We only read  two colums of the CSV file which is seperated by "."
     ui->tableView->setModel(model);  //Set the model to table view. MVC
     ui->tableView->setItemDelegate(mydelegate);  //Set the delegate to table view. MVC
+   // watcher = new QFileSystemWatcher( this );
 }
 
 MainWindow::~MainWindow()
@@ -24,25 +25,37 @@ void MainWindow::on_pushButton_clicked()
   plotdata(model);
 }
 
+void MainWindow::on_pushButton_2_clicked()
+{
+    close();
+}
+
 void MainWindow::on_pushButton_3_clicked()
 {
     QFile file(ui->lineEdit->text());
-     file.open(QIODevice::WriteOnly | QIODevice::Text);
-     QString writefile;
-     QTextStream out(&file);
-     writefile = model->horizontalHeaderItem(0)->text()+","+model->horizontalHeaderItem(1)->text();
-     out << writefile;
-
-    for (int j=0; j<1023; ++j)
+    file.open(QIODevice::WriteOnly | QIODevice::Text);
+    QString writefile;
+    QTextStream out(&file);
+    writefile = model->horizontalHeaderItem(0)->text()
+            +","
+            +model->horizontalHeaderItem(1)->text(); //write back the header of the CSV file
+    out << writefile+"\n";
+    for (int j=0; j<(model->rowCount()); ++j)
     {
       writefile = model->item(j,0)->text()+","+model->item(j,1)->text();
-      out<<writefile;
+      out<<writefile+"\n";
     }
+    file.close();  //write back to file and close
+}
 
+void MainWindow::trackChanged( const QString & entry )
+{
+    plotdata(model);
 }
 
 void MainWindow::buildmodelformfile(QStandardItemModel *model)
 {
+    model->removeRows(0,model->rowCount());  //We  need to empty the model every time the file is loaded
     QString fileName = QFileDialog::getOpenFileName(this,
         tr("Open csv file"), "./", tr("CSV Files (*.csv);; ALL Files (*.*)"));
     QFile file(fileName);
@@ -52,6 +65,8 @@ void MainWindow::buildmodelformfile(QStandardItemModel *model)
         {
           QMessageBox::information(0, "error", file.errorString());
         }
+        watcher.addPath(fileName); //Creat a watcher for the file, if the file changes, the plot will be updated if we save the data
+        QObject::connect( &watcher, SIGNAL(fileChanged(const QString&)),this,SLOT(trackChanged(const QString)));
     }
     else
     {
@@ -62,7 +77,7 @@ void MainWindow::buildmodelformfile(QStandardItemModel *model)
     QString titleline=file.readLine();  //read the title line
     QStringList titlelist=titleline.split(","); //split by "." for two table header items
     int linenumber=0;
-
+    titlelist[1].remove(QRegExp("[\\n\\t\\r]"));
     model->setHorizontalHeaderItem(0, new QStandardItem(QString(titlelist[0]))); //Set the table header
     model->setHorizontalHeaderItem(1, new QStandardItem(QString(titlelist[1])));
 
@@ -71,10 +86,14 @@ void MainWindow::buildmodelformfile(QStandardItemModel *model)
         QString lines=file.readLine();  //read in oneline of the data
         QStringList lineslist=lines.split(","); //split the data
         model->appendRow(new QStandardItem(QString("0"))); //append one row to the model
+        lineslist[1].remove(QRegExp("[\\n\\t\\r]"));  //remove the line ending of current string
+        if((!lineslist[0].isEmpty())&&(!lineslist[1].isEmpty())) //if we have both the data
+        {
         QStandardItem *Rows0 = new QStandardItem(QString(lineslist[0])); //Create hte now row with data for this line
         QStandardItem *Rows1 = new QStandardItem(QString(lineslist[1]));
         model->setItem(linenumber,0,Rows0);
         model->setItem(linenumber,1,Rows1);
+        }
         linenumber++;
     }
     file.close();
@@ -82,32 +101,30 @@ void MainWindow::buildmodelformfile(QStandardItemModel *model)
 
 void MainWindow::plotdata(QStandardItemModel *model)
 {
+    ui->customPlot->legend->clear();
     ui->customPlot->legend->setVisible(true); // plot the data
     ui->customPlot->legend->setFont(QFont("Helvetica", 9));
     QPen pen;
       ui->customPlot->addGraph();
       pen.setColor(QColor(60, 80, 180));
       ui->customPlot->graph()->setPen(pen);
-      ui->customPlot->graph()->setName(QString("test"));
+      ui->customPlot->graph()->setName(model->horizontalHeaderItem(0)->text()
+                                       + " "
+                                       + model->horizontalHeaderItem(1)->text());
       ui->customPlot->graph()->setLineStyle((QCPGraph::LineStyle)QCPGraph::lsLine);
       ui->customPlot->graph()->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssCircle, 2));
 
       // generate data:
-      QVector<double> x(1023), y(1023);
-      for (int j=0; j<1023; ++j)
+      QVector<double> x(model->rowCount()), y((model->rowCount()));
+      for (int j=0; j<(model->rowCount()); ++j)
       {
         x[j] = model->item(j,0)->text().toDouble();
         y[j] = model->item(j,1)->text().toDouble();
       }
       ui->customPlot->graph()->setData(x, y);
       ui->customPlot->graph()->rescaleAxes(true);
-
-    //  ui->customPlot->yAxis->scaleRange(1.1, ui->customPlot->yAxis->range().center());
-    //  ui->customPlot->xAxis->scaleRange(1.1, ui->customPlot->xAxis->range().center());
-
       ui->customPlot->axisRect()->setupFullAxesBox();
       ui->customPlot->replot();
 }
-
 
 

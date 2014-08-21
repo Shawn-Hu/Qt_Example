@@ -53,12 +53,19 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(921, 452);
+        MainWindow->resize(926, 468);
+        QFont font;
+        font.setFamily(QStringLiteral("Consolas"));
+        font.setBold(true);
+        font.setWeight(75);
+        MainWindow->setFont(font);
+        MainWindow->setLocale(QLocale(QLocale::English, QLocale::UnitedStates));
+        MainWindow->setDockOptions(QMainWindow::AllowTabbedDocks);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
-        verticalLayoutWidget->setGeometry(QRect(0, 310, 651, 66));
+        verticalLayoutWidget->setGeometry(QRect(0, 350, 651, 66));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
@@ -70,25 +77,25 @@ public:
         horizontalLayout_2->setContentsMargins(10, -1, 10, -1);
         label = new QLabel(verticalLayoutWidget);
         label->setObjectName(QStringLiteral("label"));
-        QFont font;
-        font.setFamily(QStringLiteral("Consolas"));
-        font.setPointSize(10);
-        label->setFont(font);
+        QFont font1;
+        font1.setFamily(QStringLiteral("Consolas"));
+        font1.setPointSize(10);
+        label->setFont(font1);
         label->setLocale(QLocale(QLocale::English, QLocale::UnitedStates));
 
         horizontalLayout_2->addWidget(label);
 
         lineEdit = new QLineEdit(verticalLayoutWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Consolas"));
-        lineEdit->setFont(font1);
+        QFont font2;
+        font2.setFamily(QStringLiteral("Consolas"));
+        lineEdit->setFont(font2);
 
         horizontalLayout_2->addWidget(lineEdit);
 
         pushButton = new QPushButton(verticalLayoutWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setFont(font1);
+        pushButton->setFont(font2);
 
         horizontalLayout_2->addWidget(pushButton);
 
@@ -114,19 +121,20 @@ public:
 
         customPlot = new QCustomPlot(centralWidget);
         customPlot->setObjectName(QStringLiteral("customPlot"));
-        customPlot->setGeometry(QRect(10, 10, 641, 291));
+        customPlot->setGeometry(QRect(0, 0, 651, 341));
         tableView = new QTableView(centralWidget);
         tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setGeometry(QRect(660, 0, 256, 391));
+        tableView->setGeometry(QRect(660, 0, 261, 411));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 921, 23));
+        menuBar->setGeometry(QRect(0, 0, 926, 20));
         menuBar->setLocale(QLocale(QLocale::English, QLocale::UnitedStates));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
+        MainWindow->insertToolBarBreak(mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QStringLiteral("statusBar"));
         MainWindow->setStatusBar(statusBar);
@@ -138,7 +146,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "PlotData", 0));
         label->setText(QApplication::translate("MainWindow", "Input file:", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Open", 0));
         pushButton_3->setText(QApplication::translate("MainWindow", "Save", 0));
