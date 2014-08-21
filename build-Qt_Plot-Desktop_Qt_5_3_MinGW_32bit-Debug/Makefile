@@ -174,6 +174,7 @@ Makefile: ../Qt_Plot/Qt_Plot.pro C:/Qt/5.3/mingw482_32/mkspecs/win32-g++/qmake.c
 		../Qt_Plot/Qt_Plot.pro \
 		C:/Qt/5.3/mingw482_32/lib/qtmaind.prl \
 		C:/Qt/5.3/mingw482_32/lib/Qt5Cored.prl \
+		C:/Qt/5.3/mingw482_32/lib/Qt5PrintSupport.prl \
 		C:/Qt/5.3/mingw482_32/lib/Qt5Widgets.prl \
 		C:/Qt/5.3/mingw482_32/lib/Qt5Gui.prl \
 		C:/Qt/5.3/mingw482_32/lib/Qt5Core.prl
@@ -293,6 +294,7 @@ C:\Qt\5.3\mingw482_32\mkspecs\features\lex.prf:
 ..\Qt_Plot\Qt_Plot.pro:
 C:/Qt/5.3/mingw482_32/lib/qtmaind.prl:
 C:/Qt/5.3/mingw482_32/lib/Qt5Cored.prl:
+C:/Qt/5.3/mingw482_32/lib/Qt5PrintSupport.prl:
 C:/Qt/5.3/mingw482_32/lib/Qt5Widgets.prl:
 C:/Qt/5.3/mingw482_32/lib/Qt5Gui.prl:
 C:/Qt/5.3/mingw482_32/lib/Qt5Core.prl:
