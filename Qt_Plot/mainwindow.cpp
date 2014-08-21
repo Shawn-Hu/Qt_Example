@@ -5,7 +5,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-
+    this->setFixedSize(926,468); //use fix size for the moment
     ui->setupUi(this);
     mydelegate=new Delegate(this);
     model=new QStandardItemModel(0,2,this); //We only read  two colums of the CSV file which is seperated by "."
