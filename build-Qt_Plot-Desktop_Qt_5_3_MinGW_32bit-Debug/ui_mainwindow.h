@@ -149,7 +149,7 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "PlotData", 0));
         label->setText(QApplication::translate("MainWindow", "Input file:", 0));
         pushButton->setText(QApplication::translate("MainWindow", "Open", 0));
-        pushButton_3->setText(QApplication::translate("MainWindow", "Save", 0));
+        pushButton_3->setText(QApplication::translate("MainWindow", "Save Data Back", 0));
         pushButton_2->setText(QApplication::translate("MainWindow", "Exit", 0));
     } // retranslateUi
 

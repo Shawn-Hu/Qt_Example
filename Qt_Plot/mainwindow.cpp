@@ -101,7 +101,7 @@ void MainWindow::buildmodelformfile(QStandardItemModel *model)
 
 void MainWindow::plotdata(QStandardItemModel *model)
 {
-    ui->customPlot->legend->clear();
+    ui->customPlot->clearGraphs();  //every time we plot, we need to remove the previous plot
     ui->customPlot->legend->setVisible(true); // plot the data
     ui->customPlot->legend->setFont(QFont("Helvetica", 9));
     QPen pen;
