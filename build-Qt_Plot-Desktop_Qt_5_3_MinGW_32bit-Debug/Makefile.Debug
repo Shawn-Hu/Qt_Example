@@ -437,6 +437,15 @@ debug/moc_mainwindow.cpp: C:/Qt/5.3/mingw482_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtexttable.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qdesktopservices.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtguiversion.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/QFileSystemWatcher \
+		../Qt_Plot/delegate.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QTableView \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtableview.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QItemDelegate \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qitemdelegate.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/QStandardItemModel \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QLineEdit \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlineedit.h \
 		../Qt_Plot/mainwindow.h
 	C:\Qt\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.3/mingw482_32/mkspecs/win32-g++ -IC:/cygwin/home/Administrator/Minesense/Qt_Example/Qt_Plot -IC:/Qt/5.3/mingw482_32/include -IC:/Qt/5.3/mingw482_32/include/QtPrintSupport -IC:/Qt/5.3/mingw482_32/include/QtWidgets -IC:/Qt/5.3/mingw482_32/include/QtGui -IC:/Qt/5.3/mingw482_32/include/QtCore -I. ..\Qt_Plot\mainwindow.h -o debug\moc_mainwindow.cpp
 
@@ -1025,6 +1034,12 @@ debug/moc_delegate.cpp: C:/Qt/5.3/mingw482_32/include/QtWidgets/QTableView \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qitemdelegate.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/QStandardItemModel \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QLineEdit \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qtextcursor.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qtextformat.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qpen.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qtextoption.h \
 		../Qt_Plot/delegate.h
 	C:\Qt\5.3\mingw482_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.3/mingw482_32/mkspecs/win32-g++ -IC:/cygwin/home/Administrator/Minesense/Qt_Example/Qt_Plot -IC:/Qt/5.3/mingw482_32/include -IC:/Qt/5.3/mingw482_32/include/QtPrintSupport -IC:/Qt/5.3/mingw482_32/include/QtWidgets -IC:/Qt/5.3/mingw482_32/include/QtGui -IC:/Qt/5.3/mingw482_32/include/QtCore -I. ..\Qt_Plot\delegate.h -o debug\moc_delegate.cpp
 
@@ -1371,6 +1386,15 @@ debug/main.o: ../Qt_Plot/main.cpp ../Qt_Plot/mainwindow.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtexttable.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qdesktopservices.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtguiversion.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/QFileSystemWatcher \
+		../Qt_Plot/delegate.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QTableView \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtableview.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QItemDelegate \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qitemdelegate.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/QStandardItemModel \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QLineEdit \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlineedit.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QApplication \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdesktopwidget.h
@@ -1699,166 +1723,43 @@ debug/mainwindow.o: ../Qt_Plot/mainwindow.cpp ../Qt_Plot/mainwindow.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtexttable.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qdesktopservices.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/qtguiversion.h \
-		ui_mainwindow.h \
-		../Qt_Plot/qcustomplot.h \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QPointer \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QWidget \
-		C:/Qt/5.3/mingw482_32/include/QtGui/QPainter \
-		C:/Qt/5.3/mingw482_32/include/QtGui/QPaintEvent \
-		C:/Qt/5.3/mingw482_32/include/QtGui/QMouseEvent \
-		C:/Qt/5.3/mingw482_32/include/QtGui/QPixmap \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QVector \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QDateTime \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QMultiMap \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QFlags \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QDebug \
-		C:/Qt/5.3/mingw482_32/include/QtGui/QVector2D \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QStack \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QCache \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/QPrinter \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qprinter.h \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qtprintsupportglobal.h \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/QPrintEngine \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qprintengine.h \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QtNumeric \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/QtPrintSupport \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/QtPrintSupportDepends \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QtWidgets \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QtWidgetsDepends \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qaccessiblewidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qcolordialog.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qerrormessage.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qfilesystemmodel.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qfontdialog.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qinputdialog.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlineedit.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qprogressdialog.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qwizard.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicseffect.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicsanchorlayout.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicsitem.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicslayout.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicslayoutitem.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicsgridlayout.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicsitemanimation.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicslinearlayout.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicsproxywidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicswidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicsscene.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicssceneevent.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicstransform.h \
-		C:/Qt/5.3/mingw482_32/include/QtGui/QVector3D \
-		C:/Qt/5.3/mingw482_32/include/QtGui/QMatrix4x4 \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgraphicsview.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qscrollarea.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qcolumnview.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdatawidgetmapper.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdirmodel.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qfileiconprovider.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qitemdelegate.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qitemeditorfactory.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlistview.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlistwidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstyleditemdelegate.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/QFileSystemWatcher \
+		../Qt_Plot/delegate.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QTableView \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtableview.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtablewidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtreeview.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtreewidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtreewidgetitemiterator.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QItemDelegate \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qitemdelegate.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/QStandardItemModel \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QLineEdit \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlineedit.h \
+		ui_mainwindow.h \
+		C:/Qt/5.3/mingw482_32/include/QtCore/QLocale \
+		C:/Qt/5.3/mingw482_32/include/QtCore/QVariant \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QAction \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qaction.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qactiongroup.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QApplication \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdesktopwidget.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QButtonGroup \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qbuttongroup.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QHBoxLayout \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlayout.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlayoutitem.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgridlayout.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qformlayout.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QLayout \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgesture.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgesturerecognizer.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qshortcut.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstackedlayout.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtooltip.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qwhatsthis.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qwidgetaction.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qkeyeventtransition.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qmouseeventtransition.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qcommonstyle.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdrawutil.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qproxystyle.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QCommonStyle \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstylefactory.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstylepainter.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstyleplugin.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qcolormap.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qcompleter.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qscroller.h \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QPointF \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QScrollerProperties \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qscrollerproperties.h \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QMetaType \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QVariant \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qsystemtrayicon.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qundogroup.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qundostack.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qundoview.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractbutton.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qbuttongroup.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qcalendarwidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qcheckbox.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qcombobox.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qcommandlinkbutton.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qpushbutton.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdatetimeedit.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdial.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdialogbuttonbox.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qdockwidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qfocusframe.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qfontcombobox.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qgroupbox.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qkeysequenceedit.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlcdnumber.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qmdiarea.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qmdisubwindow.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qmenu.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qmenubar.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qplaintextedit.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtextedit.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qprogressbar.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qradiobutton.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qscrollbar.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qsizegrip.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qspinbox.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qsplashscreen.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qsplitter.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstackedwidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstatusbar.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtextbrowser.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtoolbar.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtoolbox.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtoolbutton.h \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtwidgetsversion.h \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qabstractprintdialog.h \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qpagesetupdialog.h \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qprintdialog.h \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qprintpreviewdialog.h \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qprinterinfo.h \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QPair \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qprintpreviewwidget.h \
-		C:/Qt/5.3/mingw482_32/include/QtPrintSupport/qtprintsupportversion.h \
-		C:/Qt/5.3/mingw482_32/include/QtCore/QLocale \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QAction \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QApplication \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QButtonGroup \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QHBoxLayout \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QLineEdit \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QMenuBar \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qmenubar.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qmenu.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QStatusBar \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QTableView \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qstatusbar.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QToolBar \
-		C:/Qt/5.3/mingw482_32/include/QtWidgets/QVBoxLayout
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qtoolbar.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QVBoxLayout \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\Qt_Plot\mainwindow.cpp
 
 debug/qcustomplot.o: ../Qt_Plot/qcustomplot.cpp ../Qt_Plot/qcustomplot.h \
@@ -2446,7 +2347,13 @@ debug/delegate.o: ../Qt_Plot/delegate.cpp ../Qt_Plot/delegate.h \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/QItemDelegate \
 		C:/Qt/5.3/mingw482_32/include/QtWidgets/qitemdelegate.h \
 		C:/Qt/5.3/mingw482_32/include/QtGui/QStandardItemModel \
-		C:/Qt/5.3/mingw482_32/include/QtGui/qstandarditemmodel.h
+		C:/Qt/5.3/mingw482_32/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/QLineEdit \
+		C:/Qt/5.3/mingw482_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qtextcursor.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qtextformat.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qpen.h \
+		C:/Qt/5.3/mingw482_32/include/QtGui/qtextoption.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\delegate.o ..\Qt_Plot\delegate.cpp
 
 debug/moc_mainwindow.o: debug/moc_mainwindow.cpp 
