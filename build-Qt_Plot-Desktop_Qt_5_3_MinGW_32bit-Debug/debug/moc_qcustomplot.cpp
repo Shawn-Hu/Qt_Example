@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../../te/Qt_Example/Qt_Plot/qcustomplot.h"
+#include "../../../../../tete/Qt_Example/Qt_Plot/qcustomplot.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #include <QtCore/QList>

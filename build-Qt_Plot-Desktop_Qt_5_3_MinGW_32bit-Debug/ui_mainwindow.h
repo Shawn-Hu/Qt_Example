@@ -9,7 +9,6 @@
 #ifndef UI_MAINWINDOW_H
 #define UI_MAINWINDOW_H
 
-#include <qcustomplot.h>
 #include <QtCore/QLocale>
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
@@ -27,6 +26,7 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <qcustomplot.h>
 
 QT_BEGIN_NAMESPACE
 
