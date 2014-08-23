@@ -11,7 +11,6 @@ MainWindow::MainWindow(QWidget *parent) :
     model=new QStandardItemModel(0,2,this); //We only read  two colums of the CSV file which is seperated by "."
     ui->tableView->setModel(model);  //Set the model to table view. MVC
     ui->tableView->setItemDelegate(mydelegate);  //Set the delegate to table view. MVC
-   // watcher = new QFileSystemWatcher( this );
 }
 
 MainWindow::~MainWindow()
@@ -77,19 +76,19 @@ void MainWindow::buildmodelformfile(QStandardItemModel *model)
     QString titleline=file.readLine();  //read the title line
     QStringList titlelist=titleline.split(","); //split by "." for two table header items
     int linenumber=0;
-    titlelist[1].remove(QRegExp("[\\n\\t\\r]"));
+    titlelist[1].remove(QRegExp("[\\n\\t\\r]")); //delete the line ending
     model->setHorizontalHeaderItem(0, new QStandardItem(QString(titlelist[0]))); //Set the table header
     model->setHorizontalHeaderItem(1, new QStandardItem(QString(titlelist[1])));
 
     while(!file.atEnd())   //Read in the data from CSV file and fill the model with data. MVC model here
     {
-        QString lines=file.readLine();  //read in oneline of the data
-        QStringList lineslist=lines.split(","); //split the data
-        model->appendRow(new QStandardItem(QString("0"))); //append one row to the model
-        lineslist[1].remove(QRegExp("[\\n\\t\\r]"));  //remove the line ending of current string
-        if((!lineslist[0].isEmpty())&&(!lineslist[1].isEmpty())) //if we have both the data
+        QString lines=file.readLine();  //Read in one line of the data
+        QStringList lineslist=lines.split(","); //Split the data
+        model->appendRow(new QStandardItem(QString("0"))); //Append one row to the model
+        lineslist[1].remove(QRegExp("[\\n\\t\\r]"));  //Remove the line ending of current string
+        if((!lineslist[0].isEmpty())&&(!lineslist[1].isEmpty())) //If we have both the data
         {
-        QStandardItem *Rows0 = new QStandardItem(QString(lineslist[0])); //Create hte now row with data for this line
+        QStandardItem *Rows0 = new QStandardItem(QString(lineslist[0])); //Create the row with data for this line
         QStandardItem *Rows1 = new QStandardItem(QString(lineslist[1]));
         model->setItem(linenumber,0,Rows0);
         model->setItem(linenumber,1,Rows1);
@@ -101,7 +100,7 @@ void MainWindow::buildmodelformfile(QStandardItemModel *model)
 
 void MainWindow::plotdata(QStandardItemModel *model)
 {
-    ui->customPlot->clearGraphs();  //every time we plot, we need to remove the previous plot
+    ui->customPlot->clearGraphs();  //Every time we plot, we need to remove the previous plot
     ui->customPlot->legend->setVisible(true); // plot the data
     ui->customPlot->legend->setFont(QFont("Helvetica", 9));
     QPen pen;
