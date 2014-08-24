@@ -54,6 +54,7 @@ void MainWindow::trackChanged( const QString & entry )
 
 void MainWindow::buildmodelformfile(QStandardItemModel *model)
 {
+    int linenumber=0;
     model->removeRows(0,model->rowCount());  //We  need to empty the model every time the file is loaded
     QString fileName = QFileDialog::getOpenFileName(this,
         tr("Open csv file"), "./", tr("CSV Files (*.csv);; ALL Files (*.*)"));
@@ -74,24 +75,47 @@ void MainWindow::buildmodelformfile(QStandardItemModel *model)
     ui->lineEdit->setText(fileName);  //set the path string
 
     QString titleline=file.readLine();  //read the title line
-    QStringList titlelist=titleline.split(","); //split by "." for two table header items
-    int linenumber=0;
-    titlelist[1].remove(QRegExp("[\\n\\t\\r]")); //delete the line ending
-    model->setHorizontalHeaderItem(0, new QStandardItem(QString(titlelist[0]))); //Set the table header
-    model->setHorizontalHeaderItem(1, new QStandardItem(QString(titlelist[1])));
+    if(!titleline.isEmpty()&&titleline.contains(","))
+    {
+        QStringList titlelist=titleline.split(",");
+         if(!titlelist[0].isEmpty()&&!titlelist[1].isEmpty())
+        {
+             //split by "," for two table header items
+            titlelist[1].remove(QRegExp("[\\n\\t\\r]")); //delete the line ending
+            model->setHorizontalHeaderItem(0, new QStandardItem(QString(titlelist[0]))); //Set the table header
+            model->setHorizontalHeaderItem(1, new QStandardItem(QString(titlelist[1])));
+        }
+    }
+    else
+    {
+        model->setHorizontalHeaderItem(0, new QStandardItem(" ")); //Set the table header to empty if the hear is not in the data file
+        model->setHorizontalHeaderItem(1, new QStandardItem(" "));
+    }
+
 
     while(!file.atEnd())   //Read in the data from CSV file and fill the model with data. MVC model here
     {
+
         QString lines=file.readLine();  //Read in one line of the data
-        QStringList lineslist=lines.split(","); //Split the data
-        model->appendRow(new QStandardItem(QString("0"))); //Append one row to the model
-        lineslist[1].remove(QRegExp("[\\n\\t\\r]"));  //Remove the line ending of current string
-        if((!lineslist[0].isEmpty())&&(!lineslist[1].isEmpty())) //If we have both the data
+        if(!lines.isEmpty()&&lines.contains(","))
         {
-        QStandardItem *Rows0 = new QStandardItem(QString(lineslist[0])); //Create the row with data for this line
-        QStandardItem *Rows1 = new QStandardItem(QString(lineslist[1]));
-        model->setItem(linenumber,0,Rows0);
-        model->setItem(linenumber,1,Rows1);
+            QStringList lineslist=lines.split(","); //Split the data
+            model->appendRow(new QStandardItem(QString(" "))); //Append one row to the model
+            lineslist[1].remove(QRegExp("[\\n\\t\\r]"));  //Remove the line ending of current string
+            if((!lineslist[0].isEmpty())&&(!lineslist[1].isEmpty())) //If we have both the data
+            {
+            QStandardItem *Rows0 = new QStandardItem(QString(lineslist[0])); //Create the row with data for this line
+            QStandardItem *Rows1 = new QStandardItem(QString(lineslist[1]));
+            model->setItem(linenumber,0,Rows0);
+            model->setItem(linenumber,1,Rows1);
+            }
+        }
+        else{
+            QStandardItem *Rows0 = new QStandardItem(QString(" ")); //Create the row with data for this line
+            QStandardItem *Rows1 = new QStandardItem(QString(" "));
+            model->setItem(linenumber,0,Rows0);
+            model->setItem(linenumber,1,Rows1);
+
         }
         linenumber++;
     }
