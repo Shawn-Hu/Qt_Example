@@ -27,7 +27,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     void plotdata(QStandardItemModel *model);
     void buildmodelformfile(QStandardItemModel *model);
-        ~MainWindow();
+    ~MainWindow();
 
 private slots:
     void on_pushButton_clicked();

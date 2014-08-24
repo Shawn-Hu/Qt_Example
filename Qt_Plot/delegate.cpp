@@ -14,9 +14,9 @@ QWidget *Delegate::createEditor(QWidget *parent, const QStyleOptionViewItem &opt
 }
 void Delegate::setEditorData(QWidget *editor, const QModelIndex &index) const
 {
-   QString value = index.model()->data(index,Qt::EditRole).toString();
-   QLineEdit *lineditor = static_cast<QLineEdit*>(editor);
-   lineditor->setText(value);
+    QString value = index.model()->data(index,Qt::EditRole).toString();
+    QLineEdit *lineditor = static_cast<QLineEdit*>(editor);
+    lineditor->setText(value);
 
 }
 void Delegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
